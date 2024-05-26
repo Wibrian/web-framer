@@ -9,7 +9,7 @@ const howItWorksContent = {
     title: "Where Creativity Meets Structural Integrity",
     subtitle: "How It Works",
     description:
-      "At arcraft we're dedicated to shaping environments that transcend mere structures, weaving stories and experience into every design",
+      "At arcraft we're dedicated to shaping environments that transcend mere structures, weaving stories and experiences into every design.",
   },
   steps: [
     {
@@ -97,7 +97,7 @@ export default function HowItWorks({ className }) {
               <div className="lg:w-7/12 mb-5 lg:mb-0">
                 {howItWorksContent.heading.subtitle && (
                   <motion.span
-                    initial={{ opcatity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0, transition: { delay: 0.2, duration: 0.5 } }}
                     viewport={{ once: true }}
                     className="uppercase tracking-[3px] text-sm mb-5 inline-block text-gray-500">
@@ -106,7 +106,7 @@ export default function HowItWorks({ className }) {
                 )}
                 {howItWorksContent.heading.title && (
                   <motion.h2
-                    initial={{ opcatity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0, transition: { delay: 0.3, duration: 0.5 } }}
                     viewport={{ once: true }}
                     className="text-2xl lg:text-4xl">
@@ -117,7 +117,7 @@ export default function HowItWorks({ className }) {
               <div className="lg:w-5/12 self-end">
                 {howItWorksContent.heading.description && (
                   <motion.p
-                    initial={{ opcatity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0, transition: { delay: 0.6, duration: 0.5 } }}
                     viewport={{ once: true }}
                     className="text-gray-500">
@@ -133,7 +133,7 @@ export default function HowItWorks({ className }) {
               return (
                 <motion.div
                   key={step.title}
-                  initial={{ opcatity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0, transition: { delay: i, duration: 0.5 } }}
                   viewport={{ once: true }}
                   whileHover={{ y: -10, transition: 0.1 }}
@@ -180,7 +180,7 @@ export default function HowItWorks({ className }) {
                   return (
                     <motion.div
                       key={feature.title}
-                      initial={{ opcatity: 0, y: 30 }}
+                      initial={{ opacity: 0, y: 30 }}
                       whileInView={{ opacity: 1, y: 0, transition: { delay: i, duration: 0.5 } }}
                       viewport={{ once: true }}
                       className="relative z-40 flex gap-3 items-start">

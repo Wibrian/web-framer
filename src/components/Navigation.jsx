@@ -20,6 +20,13 @@ export default function Navigation() {
 
   let newPathname = "";
 
+  newPathname = pathname;
+  if (pathname.includes("/blog")) {
+    newPathname = "/blog";
+  } else if (pathname.includes("/projects")) {
+    newPathname = "/projects";
+  }
+
   let wHeight = null;
   let wWidth = null;
 
@@ -54,10 +61,10 @@ export default function Navigation() {
   return (
     <>
       <header role="banner" className="py-10 absolute w-full z-[3]">
-        <div className="container px-4 mx-auto flex items-center justify-between">
-          <div>
+        <div className="container px-4 mx-auto flex items-center justify-between lg:w-10/12">
+          <div className="">
             <Link href="/" className="text-[22px] text-gray-700 font-bold">
-              arcraft<span className="text-violet-600">.</span>
+              fontaine<span className="text-violet-600">.</span>
             </Link>
           </div>
           <div className="flex">
@@ -66,7 +73,9 @@ export default function Navigation() {
                 <li key={menu.label}>
                   <Link
                     href={menu.href}
-                    className={`relative before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-[2px] before:bg-violet-600 before:origin-[100%, 50%] before:duration-300 before:ease-in-out before:scale-x-0 before:scale-y-[1] before:scale-z-[1] before:will-change-transform hover:before:origin-[100%, 0%] hover:before:scale-x-[1] hover:before:scale-y-[1] hover:before:scale-z-[1] text-[12px] tracking-[2px] uppercase font-semibold pb-2`}>
+                    className={`relative before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-[2px] before:bg-violet-600 before:origin-[100%, 50%] before:duration-300 before:ease-in-out before:scale-x-0 before:scale-y-[1] before:scale-z-[1] before:will-change-transform hover:before:origin-[100%, 0%] hover:before:scale-x-[1] hover:before:scale-y-[1] hover:before:scale-z-[1] text-[12px] tracking-[2px] uppercase font-semibold pb-2 ${
+                      newPathname === menu.href ? "border-violet-600 text-violet-600 before:scale-x-[1]" : "border-transparent"
+                    }`}>
                     {menu.label}
                   </Link>
                 </li>
